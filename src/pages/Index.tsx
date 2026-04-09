@@ -3,6 +3,8 @@ import HeroSlide from "@/components/HeroSlide";
 import ScienceSlide from "@/components/ScienceSlide";
 import IngredientsSlide from "@/components/IngredientsSlide";
 import BenefitsSlide from "@/components/BenefitsSlide";
+import RecipeTimeline from "@/components/RecipeTimeline";
+import ProtocolCard from "@/components/ProtocolCard";
 import OffersBlock from "@/components/OffersBlock";
 
 const Index = () => (
@@ -12,6 +14,8 @@ const Index = () => (
     <ScienceSlide />
     <IngredientsSlide />
     <BenefitsSlide />
+    <RecipeTimeline />
+    <ProtocolCard />
     <OffersBlock />
   </div>
 );
