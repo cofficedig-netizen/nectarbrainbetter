@@ -27,6 +27,7 @@ const Index = () => {
     <OffersBlock />
     <Footer />
   </div>
-);
+  );
+};
 
 export default Index;
