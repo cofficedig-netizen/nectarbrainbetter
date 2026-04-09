@@ -5,7 +5,10 @@ import IngredientsSlide from "@/components/IngredientsSlide";
 import BenefitsSlide from "@/components/BenefitsSlide";
 import RecipeTimeline from "@/components/RecipeTimeline";
 import ProtocolCard from "@/components/ProtocolCard";
+import WarningsSlide from "@/components/WarningsSlide";
+import ClosingHero from "@/components/ClosingHero";
 import OffersBlock from "@/components/OffersBlock";
+import Footer from "@/components/Footer";
 
 const Index = () => (
   <div className="min-h-screen">
@@ -16,7 +19,10 @@ const Index = () => (
     <BenefitsSlide />
     <RecipeTimeline />
     <ProtocolCard />
+    <WarningsSlide />
+    <ClosingHero />
     <OffersBlock />
+    <Footer />
   </div>
 );
 
