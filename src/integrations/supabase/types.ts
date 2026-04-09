@@ -14,7 +14,66 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      configuracoes: {
+        Row: {
+          chave: string
+          created_at: string
+          id: string
+          updated_at: string
+          valor: string
+        }
+        Insert: {
+          chave: string
+          created_at?: string
+          id?: string
+          updated_at?: string
+          valor?: string
+        }
+        Update: {
+          chave?: string
+          created_at?: string
+          id?: string
+          updated_at?: string
+          valor?: string
+        }
+        Relationships: []
+      }
+      conteudos: {
+        Row: {
+          ativo: boolean
+          chave: string
+          created_at: string
+          id: string
+          idioma: Database["public"]["Enums"]["idioma_tipo"]
+          secao: string
+          tipo: Database["public"]["Enums"]["conteudo_tipo"]
+          updated_at: string
+          valor_texto: string
+        }
+        Insert: {
+          ativo?: boolean
+          chave: string
+          created_at?: string
+          id?: string
+          idioma: Database["public"]["Enums"]["idioma_tipo"]
+          secao: string
+          tipo?: Database["public"]["Enums"]["conteudo_tipo"]
+          updated_at?: string
+          valor_texto?: string
+        }
+        Update: {
+          ativo?: boolean
+          chave?: string
+          created_at?: string
+          id?: string
+          idioma?: Database["public"]["Enums"]["idioma_tipo"]
+          secao?: string
+          tipo?: Database["public"]["Enums"]["conteudo_tipo"]
+          updated_at?: string
+          valor_texto?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -23,7 +82,8 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      conteudo_tipo: "texto" | "html"
+      idioma_tipo: "pt" | "en" | "es"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +210,9 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      conteudo_tipo: ["texto", "html"],
+      idioma_tipo: ["pt", "en", "es"],
+    },
   },
 } as const
