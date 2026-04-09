@@ -9,8 +9,11 @@ import WarningsSlide from "@/components/WarningsSlide";
 import ClosingHero from "@/components/ClosingHero";
 import OffersBlock from "@/components/OffersBlock";
 import Footer from "@/components/Footer";
+import { useCustomCss } from "@/hooks/useCustomCss";
 
-const Index = () => (
+const Index = () => {
+  useCustomCss();
+  return (
   <div className="min-h-screen">
     <Header />
     <HeroSlide />
@@ -24,6 +27,7 @@ const Index = () => (
     <OffersBlock />
     <Footer />
   </div>
-);
+  );
+};
 
 export default Index;
